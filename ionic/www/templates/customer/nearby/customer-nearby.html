@@ -1,0 +1,120 @@
+<!--  *************** 
+		nearby (start)
+		*************** -->
+<ion-view 
+	id="nearby" 
+	name="nearby" 
+	view-title="Nearby">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header">
+		<div 
+			class="search-container">
+			<label 
+				class="item-input-wrapper">
+				<i 
+					class="icon ion-ios-search">
+				</i>
+				<input 
+					class="fill-parent-x font-family-3-size-medium" 
+					placeholder="Search . . ." 
+					type="text">
+			</label>
+		</div>
+		<ion-scroll 
+			class="tab-container" 
+			direction="x">
+			<div 
+				class="child-content-center font-family-3-size-medium row">
+				<div 
+					class="col col-25 link" 
+					ng-click="customerNearbyController.setCompanyCategory(k);" 
+					ng-repeat="k in customerNearbyController.companyCategory">
+					{{k}}
+				</div>
+			</div>
+		</ion-scroll>
+		<!--  *************** 
+				company_detail-container (start)
+				*************** -->
+		<div 
+			class="card" 
+			id="company_detail-container" 
+			name="company_detail-container" 
+			ng-repeat="(k, v) in customerNearbyController.company">
+			<div 
+				class="child-content-center font-family-1-size-large">
+				{{k}}
+			</div>
+			<button 
+				class="button button-assertive button-large button-outline fill-parent-x" 
+				ng-click="customerNearbyController.gotoState('customer.nearby.reservation_menu', {companyName: k, branchName: i});" 
+				ng-repeat="(i, j) in v.branches">
+				<!--  *************** 
+						branch_name (start)
+						*************** -->
+				<div 
+					id="branch_name-container" 
+					name="branch_name-container" 
+					class="child-content-center font-family-3-size-medium">
+					{{customerNearbyController.toStringBranchAddress(j)}}
+				</div>
+				<!--  *************** 
+						branch_name (end)
+						*************** -->
+						
+				<!--  *************** 
+						featured_menu-slidebox (start)
+						*************** -->
+				<ion-slide-box 
+					auto-play="true" 
+					delegate-handle="featured_menu-slidebox" 
+					does-continue="true" 
+					id="featured_menu-slidebox" 
+					name="featured_menu-slidebox" 
+					show-pager="false">
+					<ion-slide 
+						ng-repeat="(a, b) in customerNearbyController.companyMenuMenuitem[k]">
+						<!--  *************** 
+								featured_menu_image-container (start)
+								*************** -->
+						<div 
+							class="child-content-center" 
+							id="featured_menu_image-container" 
+							name="featured_menu_image-container">
+							<img 
+								src={{b.menuitem_image}}>
+						</div>
+						<!--  *************** 
+								featured_menu_image-container (end)
+								*************** -->
+								
+						<!--  *************** 
+								menuitem_price-container (start)
+								*************** -->
+						<div 
+							class="child-content-right font-family-3-size-medium" 
+							id="menuitem_price-container" 
+							name="menuitem_price-container">
+							&#8369{{b.menuitem_price}}
+						</div>
+						<!--  *************** 
+								menuitem_price-container (end)
+								*************** -->
+					</ion-slide>
+				</ion-slide-box>
+				<!--  *************** 
+						featured_menu-slidebox (end)
+						*************** -->
+			</button>
+		</div>
+		<!--  *************** 
+				company_detail-container (end)
+				*************** -->
+	</ion-content>
+</ion-view>
+<!--  *************** 
+		nearby (end)
+		*************** -->

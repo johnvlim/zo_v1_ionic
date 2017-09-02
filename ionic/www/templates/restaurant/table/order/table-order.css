@@ -1,0 +1,44 @@
+ion-view#order{
+	background: url("../../../common/res/img/app_bg_1.jpg");
+	background-size: cover;
+}
+
+ion-view#order div.card{
+	padding: 10px;
+}
+
+ion-view#order div.cover{
+	background-color: blue;
+	
+	height: 100%;
+	width: 100%;
+	
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	
+	opacity: 0.3;
+}
+
+ion-view#order div.order-container{
+	background-color: white;
+	
+	margin: 25px;
+	padding: 25px 10px;
+}
+
+ion-view#order div.order-container img{
+	height: 50px;
+}
+
+ion-view#order div.order-container  div.statusQueue{
+	background-color: #ef473a;	
+}
+
+ion-view#order div.order-container div.statusCooking{
+	background-color: #ffc900;
+}
+
+ion-view#order div.order-container div.statusToServe{
+	background-color: #33cd5f;
+}

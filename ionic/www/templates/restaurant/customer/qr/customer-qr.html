@@ -1,0 +1,64 @@
+<!--  *************** 
+		qr (start)
+		*************** -->
+<ion-view 
+	id="qr" 
+	name="qr" 
+	view-title="QR Scan">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header">
+		<ion-refresher 
+			on-refresh="doRefreshCompanies();" 
+			pulling-text="pull-down to refresh" 
+			refreshing-icon="ion-loading" 
+			refreshing-text="getting data. . .">
+		</ion-refresher>
+		<div 
+			class="branding child-content-right font-family-3-size-small">
+			Powered By: <ul_>ZipLogic</ul_>
+		</div>
+		<div 
+			class="child-content-center company_logo-container">
+			<img 
+				src={{customerQrController._company.company_logo}}>
+		</div>
+		<div 
+			class="child-content-center company_name-container">
+			<span 
+				class="font-family-3-size-medium">
+				Company Name: 
+			</span>
+			<span 
+				class="font-family-1-size-medium">
+				<ul_>{{customerQrController._company.company_name}}</ul_>
+			</span>
+		</div>
+		<div 
+			class="row">
+			<div 
+				class="col">
+				<button 
+					class="button button-assertive button-large button-outline fill-parent-x" 
+					id="scanQrBtn" 
+					name="scanQrBtn" 
+					ng-click="customerQrController.doScan();">
+					<div 
+						class="font-family-1-size-medium">
+						Scan QR Code
+					</div>
+					<div 
+						class="child-content-center">
+						<img 
+							src="templates/restaurant/customer/qr/res/img/scan_qr.png">
+					</div>
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
+<!--  *************** 
+		qr (end)
+		*************** -->

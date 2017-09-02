@@ -1,0 +1,59 @@
+<!--  *************** 
+		launch (start)
+		*************** -->
+<ion-view 
+	id="launch" 
+	name="launch" 
+	view-title="Customer">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header">
+		<ion-refresher 
+			on-refresh="doRefreshCompanies();" 
+			pulling-text="pull-down to refresh" 
+			refreshing-icon="ion-loading" 
+			refreshing-text="getting data. . .">
+		</ion-refresher>
+		<div 
+			class="branding child-content-right font-family-3-size-small">
+			Powered By: <ul_>ZipLogic</ul_>
+		</div>
+		<div 
+			class="child-content-center company_logo-container">
+			<img 
+				src={{customerLaunchController._company.company_logo}}>
+		</div>
+		<div 
+			class="child-content-center company_name-container">
+			<span 
+				class="font-family-3-size-medium">
+				Company Name: 
+			</span>
+			<span 
+				class="font-family-1-size-medium">
+				<ul_>{{customerLaunchController._company.company_name}}</ul_>
+			</span>
+		</div>
+		<!--  *************** 
+				gotoCustomerQrBtn (start)
+				*************** -->
+		<button 
+			class="button button-assertive button-medium fill-parent-x font-family-3-size-medium" 
+			id="gotoCustomerQrBtn" 
+			name="gotoCustomerQrBtn" 
+			ng-click="customerLaunchController.gotoState('restaurant.customer-qr');">
+			<i 
+				class="icon ion-pizza">
+			</i>
+			I'm Hungry. . .Let's Eat
+		</button>
+		<!--  *************** 
+				gotoCustomerQrBtn (end)
+				*************** -->
+	</ion-content>
+</ion-view>
+<!--  *************** 
+		launch (end)
+		*************** -->

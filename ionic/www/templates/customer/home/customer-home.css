@@ -1,0 +1,78 @@
+ion-view#home div#advertisement-slidebox, 
+ion-view#home div#blog-slidebox{
+	height: 200px;
+}
+
+ion-view#home div#advertisement-slidebox div#advertisement_content-container, 
+ion-view#home div#blog-slidebox div#blog_content-container{
+	height: 20%;
+	
+	line-height: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ion-view#home div#advertisement-slidebox div#advertisement_image-container, 
+ion-view#home div#blog-slidebox div#blog_image-container{
+	height: 50%;
+}
+
+ion-view#home div#advertisement-slidebox div#advertisement_title-container, 
+ion-view#home div#blog-slidebox div#blog_title-container{
+	color: blue;
+	
+	height: 10%;
+	
+	line-height: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ion-view#home div#advertisement-slidebox div#advertisement_price-container{
+	height: 10%;
+	
+	padding-right: 10px;
+}
+
+ion-view#home div#blog-slidebox div#blog_author-container{
+	padding-left: 10px;
+}
+
+ion-view#home div.card{
+	opacity: 0.9;
+}
+
+ion-view#home div.company_logo-container{
+	height: 100px;
+	
+	margin-bottom: -25px;
+	margin-top: -25px;
+}
+
+ion-view#home div.search-container{
+	background: white;
+	
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	
+	opacity: 0.9;
+}
+
+ion-view#home div.search-container label{
+	background: white;
+}
+
+ion-view#home div.search-container label input{
+	border-bottom: solid 1px red;
+	
+	padding-left: 10px;
+}

@@ -1,0 +1,108 @@
+<!--  *************** 
+		order_menu (start)
+		*************** -->
+<ion-view 
+	id="order_menu" 
+	name="order_menu" 
+	view-title="Menu">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header">
+		<ion-refresher 
+			on-refresh="doRefreshCompanies();" 
+			pulling-text="pull-down to refresh" 
+			refreshing-icon="ion-loading" 
+			refreshing-text="getting data. . .">
+		</ion-refresher>
+		<ion-scroll 
+			class="tab-container" 
+			direction="x">
+			<div 
+				class="child-content-center font-family-3-size-medium row">
+				<div 
+					class="col col-25 link" 
+					ng-click="customerOrderMenuController.setMenuName(k);" 
+					ng-repeat="(k, v) in customerOrderMenuController.companyMenu">
+					{{k}}
+				</div>
+			</div>
+		</ion-scroll>
+		<!--  *************** 
+				menuitem-container (start)
+				*************** -->
+		<div 
+			class="item item-thumbnail-left" 
+			id="menuitem-container" 
+			name="menuitem-container" 
+			ng-repeat="(k, v) in customerOrderMenuController.companyMenuMenuitem" 
+			ng-show="v.menu_id == customerOrderMenuController.getMenuIdFromName()">
+			<img 
+				src={{v.menuitem_image}}>
+			<div 
+				class="font-family-3-size-large">
+				<ul_>{{v.menuitem_name}}</ul_>
+			</div>
+			<div 
+				class="font-family-3-size-small">
+				&#8369{{v.menuitem_price}}
+			</div>
+			<div 
+				id="menuitemDesc" 
+				name="menuitemDesc" 
+				class="child-content-justify font-family-2-size-small">
+				{{v.menuitem_desc}}
+			</div>
+			<div 
+				class="order_quantity-container row">
+				<div 
+					class="child-content-center col col-25">
+					<button 
+						class="button button-positive button-small" 
+						ng-click="customerOrderMenuController.subReservationOrder(v);">
+						<i 
+							class="icon ion-minus">
+						</i>
+					</button>
+				</div>
+				<div 
+					class="child-content-center col col-50 font-family-3-size-large">
+					{{v.quantity}}
+				</div>
+				<div 
+					class="col col-25">
+					<button 
+						class="button button-positive button-small" 
+						ng-click="customerOrderMenuController.addReservationOrder(v);">
+						<i 
+							class="icon ion-plus">
+						</i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!--  *************** 
+				menuitem-container (end)
+				*************** -->
+	</ion-content>
+	<!--  *************** 
+			gotoOrderBtn (start)
+			*************** -->
+	<button 
+		class="button button-medium button-positive child-content-center" 
+		id="gotoOrderBtn" 
+		name="gotoOrderBtn" 
+		ng-click="customerOrderMenuController.gotoState('restaurant.customer-order_order');" 
+		ng-show="keys(customerOrderMenuController.user.reservationOrder).length > 0">
+		<i 
+			class="icon ion-arrow-right-a">
+		</i>
+	</button>
+	<!--  *************** 
+			gotoOrderBtn (end)
+			*************** -->
+</ion-view>
+<!--  *************** 
+		order_menu (end)
+		*************** -->

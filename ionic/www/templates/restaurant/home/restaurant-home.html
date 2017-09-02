@@ -1,0 +1,100 @@
+<!--  *************** 
+		home (start)
+		*************** -->
+<ion-view 
+	id="home" 
+	name="home" 
+	view-title="home">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header">
+		<ion-refresher 
+			on-refresh="doRefreshCompanies();" 
+			pulling-text="pull-down to refresh" 
+			refreshing-icon="ion-loading" 
+			refreshing-text="getting data. . .">
+		</ion-refresher>
+		<div 
+			class="branding child-content-right font-family-3-size-small">
+			Powered By: <ul_>ZipLogic</ul_>
+		</div>
+		<div 
+			class="nav-container">
+			<div 
+				class="row">
+				<div 
+					class="col col-50">
+					<button 
+						class="button button-assertive button-large button-outline fill-parent-x" 
+						ng-click="restaurantHomeController.gotoState('restaurant.customer-launch');">
+						<div 
+							class="font-family-1-size-medium">
+							New Customer
+						</div>
+						<div 
+							class="child-content-center">
+							<img 
+								src="templates/restaurant/home/res/img/new_customer.png">
+						</div>
+					</button>
+				</div>
+				<div 
+					class="col col-50">
+					<button 
+						class="button button-assertive button-large button-outline fill-parent-x" 
+						ng-click="restaurantHomeController.gotoState('restaurant.table-orderreference');">
+						<div 
+							class="font-family-1-size-medium">
+							Manage Table
+						</div>
+						<div 
+							class="child-content-center">
+							<img 
+								src="templates/restaurant/home/res/img/manage_table.png">
+						</div>
+					</button>
+				</div>
+			</div>
+			<div 
+				class="row">
+				<div 
+					class="col col-50">
+					<button 
+						class="button button-assertive button-large button-outline fill-parent-x" 
+						ng-click="">
+						<div 
+							class="font-family-1-size-medium">
+							Online Order
+						</div>
+						<div 
+							class="child-content-center">
+							<img 
+								src="templates/restaurant/home/res/img/online_order.png">
+						</div>
+					</button>
+				</div>
+				<div 
+					class="col col-50">
+					<button 
+						class="button button-assertive button-large button-outline fill-parent-x" 
+						ng-click="restaurantHomeController.callWaiter();">
+						<div 
+							class="font-family-1-size-medium">
+							Call Waiter
+						</div>
+						<div 
+							class="child-content-center">
+							<img 
+								src="templates/restaurant/home/res/img/call_waiter.png">
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
+<!--  *************** 
+		home (end)
+		*************** -->

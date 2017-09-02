@@ -1,0 +1,9 @@
+ion-header-bar button.back-button, 
+ion-header-bar div.title{
+	font-family: 'Courgette', cursive;
+	font-size: 12px !important;
+}
+
+ion-header-bar div.title{
+	font-size: 15px !important;
+}

@@ -1,0 +1,65 @@
+ion-view#nearby{
+	background: url("../../common/res/img/app_bg_1.jpg");
+	background-size: cover;
+}
+
+ion-view#nearby div#company_detail-container{
+	opacity: 0.9;
+	
+	padding: 25px;
+}
+
+ion-view#nearby div#company_detail-container div#branch_name-container{
+	line-height: 15px;
+}
+
+ion-view#nearby div#company_detail-container div#featured_menu-slidebox{
+	height: 150px;
+}
+
+ion-view#nearby div#company_detail-container div#featured_menu-slidebox div#featured_menu_image-container{
+	height: 75%;
+	
+	padding-top: 10px;
+}
+
+ion-view#nearby div#company_detail-container div#featured_menu-slidebox div#menuitem_price-container{
+	height: 10%;
+}
+
+ion-view#nearby div.cover{
+	background-color: blue;
+	
+	height: 100%;
+	width: 100%;
+	
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	
+	opacity: 0.3;
+}
+
+ion-view#nearby div.search-container{
+	background: #ef473a;
+	
+	padding: 10px;
+}
+
+ion-view#nearby div.search-container label{
+	background: white;
+}
+
+ion-view#nearby div.search-container label input{
+	padding-left: 10px;
+}
+
+ion-view#nearby ion-scroll.tab-container{
+	background-color:  #ef473a;
+}
+
+ion-view#nearby ion-scroll.tab-container div.link{
+	background-color:  #ef473a;
+	
+	border-right: solid 1px #f0f0f0;
+}

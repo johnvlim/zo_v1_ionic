@@ -1,0 +1,64 @@
+<!--  *************** 
+		orderreference (start)
+		*************** -->
+<ion-view 
+	id="orderreference" 
+	name="orderreference" 
+	view-title="Order">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header">
+		<ion-refresher 
+			on-refresh="tableOrderreferenceController.doFetchReservationsOrderreferencesOrders();" 
+			pulling-text="pull-down to refresh" 
+			refreshing-icon="ion-loading" 
+			refreshing-text="getting data. . .">
+		</ion-refresher>
+		<div 
+			ng-click="tableOrderreferenceController.gotoState('restaurant.table-order', v);" 
+			ng-if="!tableOrderreferenceController.isReservation" 
+			ng-repeat="(k, v) in tableOrderreferenceController.companyBranchOrderreference">
+			<div 
+				class="card">
+				<div 
+					class="child-content-center font-family-3-size-medium" 
+					ng-class="{statusSent: 'sent' == v.orderreference[keys(v.orderreference)[0]].orderreference_status, 
+						statusInProgress: 'in progress' == v.orderreference[keys(v.orderreference)[0]].orderreference_status, 
+						statusDone: 'done' == v.orderreference[keys(v.orderreference)[0]].orderreference_status}">
+					{{v.orderreference[keys(v.orderreference)[0]].orderreference_status}}
+				</div>
+				<div 
+					class="row">
+					<div 
+						class="col">
+						<span 
+							class="font-family-3-size-large">
+							Table # {{v.table[keys(v.table)[0]].table_number}}
+						</span>
+						<br>
+						<span 
+							class="font-family-2-size-small">
+							Orderreference: <ul_>{{v.orderreference[keys(v.orderreference)[0]].orderreference_code}}</ul_>
+							<br>
+							Username: <ul_>{{v.orderreference[keys(v.orderreference)[0]].customer_username}}</ul_>
+						</span>
+					</div>
+				</div>
+				<button 
+					class="button button-assertive button-small fill-parent-x font-family-3-size-medium" 
+					ng-click="tableOrderreferenceController.acknowledge(v.orderreference[keys(v.orderreference)[0]]);" 
+					ng-if="'sent' == v.orderreference[keys(v.orderreference)[0]].orderreference_status">
+					<i 
+						class="icon ion-thumbsup">
+					</i>
+					Acknowledge
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
+<!--  *************** 
+		orderreference (end)
+		*************** -->

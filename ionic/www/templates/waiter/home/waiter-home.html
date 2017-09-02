@@ -1,0 +1,40 @@
+<!--  *************** 
+		home (start)
+		*************** -->
+<ion-view 
+	id="home" 
+	name="home" 
+	view-title="home">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header" 
+		ng-init="waiterHomeController.initializeMqtt();">
+		<div 
+			class="card">
+			<ion-slide-box 
+				delegate-handle="waiter_request-slidebox" 
+				ng-repeat="(k, v) in waiterHomeController.waiterRequests">
+				<ion-slide 
+					class="item" 
+					on-swipe-right="waiterHomeController.doSwipeRight(v);">
+					<span 
+						class="font-family-3-size-large">
+						<ul_>Table # {{v.table_number}}</ul_>
+					</span>
+					<br>
+					<span 
+						class="font-family-2-size-small">
+						User: <ul_>{{v.customer_username}}</ul_>
+						<br>
+						Purpose: <ul_>{{v.request_option}}</ul_>
+					</span>
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+	</ion-content>
+</ion-view>
+<!--  *************** 
+		home (end)
+		*************** -->

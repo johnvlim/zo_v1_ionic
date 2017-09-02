@@ -1,0 +1,9 @@
+div.mymenu_order-container button.status-active{
+	background-color: #387ef5 !important;
+	color: #f0f0f0 !important;
+}
+
+div.mymenu_order-container div#menuitem_name{
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 15px;
+}

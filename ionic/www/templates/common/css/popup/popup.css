@@ -1,0 +1,18 @@
+div.popup div.popup-head{
+	background-color: #ffc900;
+}
+
+div.popup div.popup-body{
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+	
+	text-align: center;
+}
+
+div.popup div.popup-buttons button{
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+}
+
+div.popup div.popup-buttons button{
+}

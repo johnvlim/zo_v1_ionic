@@ -1,0 +1,48 @@
+ion-view#reservation_menu{
+	background: url("../../../common/res/img/app_bg_1.jpg");
+	background-size: cover;
+}
+
+ion-view#reservation_menu div#company_detail_header-container{
+	background-color: #ef473a;
+	color: white;
+}
+
+ion-view#reservation_menu div.cover{
+	background-color: blue;
+	
+	height: 100%;
+	width: 100%;
+	
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	
+	opacity: 0.3;
+}
+
+ion-view#reservation_menu div.item.item-thumbnail-left{
+	margin: 10px;
+	
+	opacity:  0.9;
+}
+
+ion-view#reservation_menu div.item.item-thumbnail-left div#branch_detail-container{
+	line-height: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: normal;
+}
+
+ion-view#reservation_menu div.item.item-thumbnail-left > img{
+	object-fit: cover;
+}
+
+ion-view#reservation_menu ion-scroll.tab-container{
+	background-color:  #ef473a;
+}
+
+ion-view#reservation_menu ion-scroll.tab-container div.link{
+	background-color:  #ef473a;
+	border-right: solid 1px #f0f0f0;
+}

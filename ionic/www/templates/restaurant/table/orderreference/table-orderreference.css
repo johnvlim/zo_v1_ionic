@@ -1,0 +1,33 @@
+ion-view#orderreference{
+	background: url("../../../common/res/img/app_bg_1.jpg");
+	background-size: cover;
+}
+
+ion-view#orderreference div.card{
+	padding: 10px;
+}
+
+ion-view#orderreference div.cover{
+	background-color: blue;
+	
+	height: 100%;
+	width: 100%;
+	
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	
+	opacity: 0.3;
+}
+
+ion-view#orderreference div.card div.statusSent{
+	background-color: #ef473a;
+}
+
+ion-view#orderreference div.card div.statusInProgress{	
+	background-color: #ffc900;
+}
+
+ion-view#orderreference div.card div.statusDone{
+	background-color: #33cd5f;
+}

@@ -1,0 +1,84 @@
+<!--  *************** 
+		home (start)
+		*************** -->
+<ion-view 
+	id="home" 
+	name="home" 
+	view-title="home">
+	<div 
+		class="cover">
+	</div>
+	<ion-content 
+		class="has-header">
+		<ion-refresher 
+			on-refresh="kitchenHomeController.doFetchReservationsOrderreferencesOrders();" 
+			pulling-text="pull-down to refresh" 
+			refreshing-icon="ion-loading" 
+			refreshing-text="getting data. . .">
+		</ion-refresher>
+		<div 
+			class="row">
+			<div 
+				class="col col-25">
+				<button 
+					class="button button-assertive button-outline button-small fill-parent-x" 
+					ng-click="kitchenHomeController.changeOrderStatus('left');">
+					<i 
+						class="icon ion-chevron-left">
+					</i>
+				</button>
+			</div>
+			<!--  *************** 
+					order_status (start)
+					*************** -->
+			<div 
+				class="child-content-center col col-50" 
+				id="order_status" 
+				name="order_status">
+				<span 
+					class="child-content-center font-family-3-size-medium">
+					<ul_>{{kitchenHomeController.orderStatus}}</ul_>
+				</span>
+			</div>
+			<!--  *************** 
+					order_status (end)
+					*************** -->
+			<div 
+				class="col col-25">
+				<button 
+					class="button button-assertive button-outline button-small fill-parent-x" 
+					ng-click="kitchenHomeController.changeOrderStatus('right');">
+					<i 
+						class="icon ion-chevron-right">
+					</i>
+				</button>
+			</div>
+		</div>
+		<div 
+			class="card" 
+			ng-repeat="i in kitchenHomeController.companyBranchOrderreference">
+			<ion-slide-box 
+				delegate-handle="order-slidebox" 
+				ng-repeat="(k, v) in i.order">
+				<ion-slide 
+					class="item" 
+					ng-if="v.order_status == kitchenHomeController.orderStatus" 
+					on-swipe-left="kitchenHomeController.doSwipe(i, v, 'left');" 
+					on-swipe-right="kitchenHomeController.doSwipe(i, v, 'right');">
+					<span 
+						class="font-family-3-size-large">
+						Order Id: <ul_>{{k}}</ul_>
+						<br>
+					</span>
+					<span 
+						class="font-family-2-size-small">
+						Menuitem: <ul_>{{kitchenHomeController.companyMenuMenuitem[v.menuitem_id].menuitem_name}}</ul_>
+					</span>
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+	</ion-content>
+</ion-view>
+<!--  *************** 
+		home (end)
+		*************** -->

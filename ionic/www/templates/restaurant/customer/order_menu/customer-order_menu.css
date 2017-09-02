@@ -1,0 +1,53 @@
+ion-view#order_menu{
+	background: url("../../../common/res/img/app_bg_1.jpg");
+	background-size: cover;
+}
+
+ion-view#order_menu button#gotoOrderBtn{
+	bottom: 50px;
+	position: absolute;
+	right: 50px;
+}
+
+ion-view#order_menu div.cover{
+	background-color: blue;
+	
+	height: 100%;
+	width: 100%;
+	
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	
+	opacity: 0.3;
+}
+
+ion-view#order_menu div#menuitem-container{
+	margin: 10px;
+	
+	opacity: 0.7;
+}
+
+ion-view#order_menu div#menuitem-container > img{
+	border-radius: 25px;
+}
+
+ion-view#order_menu div#menuitemDesc{
+	line-height: 12px;
+	white-space: normal;
+}
+
+ion-view#order_menu div.order_quantity-container{
+	border-bottom: solid 1px;
+	border-top: solid 1px;
+}
+
+ion-view#order_menu ion-scroll.tab-container{
+	background-color:  #ef473a;
+}
+
+ion-view#order_menu ion-scroll.tab-container div.link{
+	background-color:  #ef473a;
+	
+	border-right: solid 1px #f0f0f0;
+}

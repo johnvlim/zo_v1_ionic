@@ -1,0 +1,71 @@
+<div 
+	class="mymenu_menu-container" 
+	ng-controller="mymenuMenuController as mymenuMenuController">
+	<ion-scroll 
+		class="tab-container" 
+		direction="x">
+		<div 
+			class="link" 
+			ng-click="mymenuMenuController.setMenuName(k)" 
+			ng-repeat="(k, v) in mymenuMenuController.companyMenu">
+			{{k}}
+		</div>
+	</ion-scroll>
+	<div 
+		class="item item-container item-thumbnail-left" 
+		ng-repeat="(k, v) in mymenuMenuController.companyMenuMenuitem" 
+		ng-show="v.menu_id == mymenuMenuController.getMenuIdFromName()">
+		<img 
+			src={{v.menuitem_image}}>
+		<div 
+			class="title">
+			{{v.menuitem_name}}
+		</div>
+		<div 
+			class="body">
+			{{v.menuitem_desc}}
+		</div>
+		<div 
+			class="row">
+			<div 
+				class="child-content-right col">
+				<button 
+					class="button button-positive button-small" 
+					ng-click="mymenuMenuController.addReservationOrder(v);">
+					<i 
+						class="icon ion-plus">
+					</i>
+					<span 
+						class="font-family-1-size-small">
+						Add
+					</span>
+				</button>
+				<!--  *************** 
+						mymenu_menu_quantity-container (start)
+						*************** -->
+				<div 
+					id="mymenu_menu_quantity-container" 
+					name="mymenu_menu_quantity-container">
+					<span 
+						class="font-family-1-size-medium">
+						{{v.quantity}}
+					</span>
+				</div>
+				<!--  *************** 
+						mymenu_menu_quantity-container (end)
+						*************** -->
+				<button 
+					class="button button-positive button-small" 
+					ng-click="mymenuMenuController.subReservationOrder(v);">
+					<i 
+						class="icon ion-minus">
+					</i>
+					<span 
+						class="font-family-1-size-small">
+						Sub
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

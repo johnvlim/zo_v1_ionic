@@ -1,0 +1,9 @@
+div.scroll-refresher{
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+}
+
+div.scroll-refresher div.ionic-refresher-content div.text-refreshing{
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+}

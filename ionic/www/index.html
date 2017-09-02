@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title></title>
+		
+		<link rel="manifest" href="manifest.json">
+		<!--  *************** 
+				jQuery
+				*************** -->
+		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<!--  *************** 
+				bluebird
+				*************** -->
+		<script src="lib/bluebird/bluebird.min.js"></script>
+		<!--  *************** 
+				ionic
+				*************** -->
+		<script src="lib/ionic/js/ionic.bundle.js"></script>
+		<script src="lib/ionic.cloud/ionic.cloud.min.js"></script>
+		<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+		<!--  *************** 
+				cordova
+				*************** -->
+		<script src="cordova.js"></script>
+		<!--  *************** 
+				ng-cordova
+				*************** -->
+		<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+		<!--  *************** 
+				app.js
+				*************** -->
+		<script src="templates/common/app.js"></script>
+		<!--  *************** 
+				constants
+				*************** -->
+		<script src="templates/common/constants.js"></script>
+		<!--  *************** 
+				ng-storage
+				*************** -->
+		<script src="lib/ngstorage/ngStorage.min.js"></script>
+		<!--  *************** 
+				mqtt
+				*************** -->
+		<script src="lib/paho-mqtt/src/mqttws31.js" type="text/javascript"></script>
+		<!--  *************** 
+				google-places
+				*************** -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLyrn2UTMDU4cjB0Sa_LFHQsJEXsFvX84&libraries=places"></script>
+		<!--  *************** 
+				ng-map
+				*************** -->
+		<script type="text/javascript" src="lib/ngmap/build/scripts/ng-map.min.js"></script>
+		<!--  *************** 
+				ion-datetime-picker
+				*************** -->
+		<script type="text/javascript" src="lib/ion-datetime-picker/release/ion-datetime-picker.min.js"></script>
+		<link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
+		<!--  *************** 
+				moment
+				*************** -->
+		<script type="text/javascript" src="lib/moment/min/moment.min.js"></script>
+		
+		<!--  *************** 
+				controller
+				*************** -->
+		<script src="templates/login/js/controllers/loginController.js"></script>
+		<script src="templates/customer/home/js/controllers/customerHomeController.js"></script>
+		<script src="templates/customer/nearby/js/controllers/customerNearbyController.js"></script>
+		<script src="templates/customer/nearby/reservation_menu/js/controllers/nearbyReservationMenuController.js"></script>
+		<script src="templates/customer/nearby/reservation_order/js/controllers/nearbyReservationOrderController.js"></script>
+		<script src="templates/customer/mymenu/js/controllers/customerMymenuController.js"></script>
+		<script src="templates/customer/mymenu/order/js/controllers/mymenuOrderController.js"></script>
+		<script src="templates/customer/mymenu/menu/js/controllers/mymenuMenuController.js"></script>
+		<script src="templates/customer/mymenu/bill/js/controllers/mymenuBillController.js"></script>
+		<script src="templates/customer/reservation/js/controllers/customerReservationController.js"></script>
+		<script src="templates/restaurant/home/js/controllers/restaurantHomeController.js"></script>
+		<script src="templates/restaurant/customer/launch/js/controllers/customerLaunchController.js"></script>
+		<script src="templates/restaurant/customer/qr/js/controllers/customerQrController.js"></script>
+		<script src="templates/restaurant/customer/order_menu/js/controllers/customerOrderMenuController.js"></script>
+		<script src="templates/restaurant/customer/order_order/js/controllers/customerOrderOrderController.js"></script>
+		<script src="templates/restaurant/table/orderreference/js/controllers/tableOrderreferenceController.js"></script>
+		<script src="templates/restaurant/table/order/js/controllers/tableOrderController.js"></script>
+		<script src="templates/kitchen/home/js/controllers/kitchenHomeController.js"></script>
+		<script src="templates/waiter/home/js/controllers/waiterHomeController.js"></script>
+		<!--  *************** 
+				services
+				*************** -->
+		<script src="templates/common/utilities/customer/customerService.js"></script>
+		<script src="templates/common/utilities/company/companyService.js"></script>
+		<script src="templates/common/utilities/branch/branchService.js"></script>
+		<script src="templates/common/utilities/menu/menuService.js"></script>
+		<script src="templates/common/utilities/table/tableService.js"></script>
+		<script src="templates/common/utilities/menuitem/menuitemService.js"></script>
+		<script src="templates/common/utilities/orderreference/orderreferenceService.js"></script>
+		<script src="templates/common/utilities/order/orderService.js"></script>
+		<script src="templates/common/utilities/reservation/reservationService.js"></script>
+		<script src="templates/common/utilities/customerCompanyBranch/customerCompanyBranchService.js"></script>
+		<script src="templates/common/utilities/orderreferenceOrder/orderreferenceOrderService.js"></script>
+		<script src="templates/common/utilities/reservationOrderreferenceOrder/reservationOrderreferenceOrderService.js"></script>
+		<script src="templates/common/utilities/data/dataService.js"></script>
+		<script src="templates/common/utilities/marketing/marketingService.js"></script>
+		<script src="templates/common/utilities/geolocation/geolocationService.js"></script>
+		<script src="templates/common/utilities/googleplaces/googleplacesService.js"></script>
+		<script src="templates/common/utilities/httpInterceptor/httpInterceptor.js"></script>
+		<script src="templates/common/utilities/login/loginService.js"></script>
+		<script src="templates/common/utilities/mqtt/mqttService.js"></script>
+		<script src="templates/common/utilities/network/networkService.js"></script>
+		<script src="templates/common/utilities/popup/popupService.js"></script>
+		<script src="templates/common/utilities/qr/qrService.js"></script>
+		<!--  *************** 
+				google fonts
+				*************** -->
+		<link href="https://fonts.googleapis.com/css?family=Courgette|Oswald|Roboto" rel="stylesheet">
+		<!--  *************** 
+				styles
+				*************** -->
+		<link href="templates/common/css/styles.css" rel="stylesheet">
+		<link href="templates/login/login.css" rel="stylesheet">
+		<link href="templates/customer/customer.css" rel="stylesheet">
+		<link href="templates/customer/home/customer-home.css" rel="stylesheet">
+		<link href="templates/customer/nearby/customer-nearby.css" rel="stylesheet">
+		<link href="templates/customer/nearby/reservation_menu/nearby-reservation_menu.css" rel="stylesheet">
+		<link href="templates/customer/nearby/reservation_order/nearby-reservation_order.css" rel="stylesheet">
+		<link href="templates/customer/mymenu/customer-mymenu.css" rel="stylesheet">
+		<link href="templates/customer/mymenu/order/mymenu-order.css" rel="stylesheet">
+		<link href="templates/customer/mymenu/menu/mymenu-menu.css" rel="stylesheet">
+		<link href="templates/customer/mymenu/bill/mymenu-bill.css" rel="stylesheet">
+		<link href="templates/customer/reservation/customer-reservation.css" rel="stylesheet">
+		<link href="templates/restaurant/restaurant.css" rel="stylesheet">
+		<link href="templates/restaurant/home/restaurant-home.css" rel="stylesheet">
+		<link href="templates/restaurant/customer/launch/customer-launch.css" rel="stylesheet">
+		<link href="templates/restaurant/customer/qr/customer-qr.css" rel="stylesheet">
+		<link href="templates/restaurant/customer/order_menu/customer-order_menu.css" rel="stylesheet">
+		<link href="templates/restaurant/customer/order_order/customer-order_order.css" rel="stylesheet">
+		<link href="templates/restaurant/table/orderreference/table-orderreference.css" rel="stylesheet">
+		<link href="templates/restaurant/table/order/table-order.css" rel="stylesheet">
+		<link href="templates/kitchen/kitchen.css" rel="stylesheet">
+		<link href="templates/waiter/waiter.css" rel="stylesheet">
+		<link href="templates/common/css/popup/popup.css" rel="stylesheet">
+		<link href="templates/common/css/refresher/refresher.css" rel="stylesheet">
+	</head>
+	
+	<body ng-app="starter">
+		<ion-nav-view 
+			name="main">
+		</ion-nav-view>
+	</body>
+</html>

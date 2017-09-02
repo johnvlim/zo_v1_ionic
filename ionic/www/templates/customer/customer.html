@@ -1,0 +1,56 @@
+<ion-view 
+	view-title="Customer">
+	<ion-nav-bar 
+		class="bar-assertive font-family-1-size-medium">
+		<ion-nav-back-button 
+			class="button-clear">
+			<i 
+				class="ion-arrow-left-c">
+			</i>
+		</ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-pane>
+		<ion-tabs 
+			class="tabs-assertive tabs-icon-top">
+			<ion-tab 
+				icon="icon ion-ios-home" 
+				title="Home" 
+				ui-sref="customer.home" 
+				ui-sref-opts="{reload: true, notify: true}">
+				<ion-nav-view 
+					name="customer-home">
+				</ion-nav-view>
+			</ion-tab>
+			
+			<ion-tab 
+				icon="icon ion-location" 
+				title="Nearby" 
+				ui-sref="customer.nearby" 
+				ui-sref-opts="{reload: true, notify: true}">
+				<ion-nav-view 
+					name="customer-nearby">
+				</ion-nav-view>
+			</ion-tab>
+			
+			<ion-tab 
+				icon="icon ion-ios-list" 
+				title="My Menu" 
+				ui-sref="customer.mymenu" 
+				ui-sref-opts="{reload: true, notify: true}">
+				<ion-nav-view 
+					name="customer-mymenu">
+				</ion-nav-view>
+			</ion-tab>
+			
+			<ion-tab 
+				icon="icon ion-ios-book" 
+				title="Reservation" 
+				ui-sref="customer.reservation" 
+				ui-sref-opts="{reload: true, notify: true}">
+				<ion-nav-view 
+					name="customer-reservation">
+				</ion-nav-view>
+			</ion-tab>
+		</ion-tabs>
+	</ion-pane>
+</ion-view>

@@ -1,0 +1,46 @@
+ion-view#login{
+	background: url("../common/res/img/app_bg_1.jpg");
+	background-size: cover;
+}
+
+ion-view#login div.avatar-container > img{
+	border-radius: 50%;
+	
+	height: 150px;
+}
+
+ion-view#login div.company_logo-container{
+	height: 100px;
+	
+	margin-top: 15px;
+}
+
+ion-view#login div.cover{
+	background-color: blue;
+	
+	height: 100%;
+	width: 100%;
+	
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	
+	opacity: 0.3;
+}
+
+ion-view#login div.form-container{
+	background-color: white;
+	
+	margin: 10px 10px;
+	padding: 10px 50px;
+	
+	opacity: 0.8;
+}
+
+ion-view#login div.form-container input{
+	border-bottom: solid 1px #f0f0f0;
+}
+
+ion-view#login div.form-container label{
+	padding: 5px 16px;
+}

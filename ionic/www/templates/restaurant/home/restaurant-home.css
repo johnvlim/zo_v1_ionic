@@ -1,0 +1,33 @@
+ion-view#home{
+	background: url("../../common/res/img/app_bg_1.jpg");
+	background-size: cover;
+}
+
+ion-view#home div.branding{
+	background-color: #ef473a;
+	color: white;
+	
+	padding-right: 20px;
+}
+
+ion-view#home div.cover{
+	background-color: blue;
+	
+	height: 100%;
+	width: 100%;
+	
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	
+	opacity: 0.3;
+}
+
+ion-view#home div.nav-container{
+	background-color: white;
+	border-radius: 10px;
+	
+	margin: 25px 25px;
+	
+	opacity: 0.9;
+}
